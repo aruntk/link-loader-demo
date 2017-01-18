@@ -1,0 +1,21 @@
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="example-item">
+  <template>
+    <div>
+      this element is example-item
+      <h2>example name</h2>
+      <img src="a.png"/>
+      <!-- src of the image = src/components/a.png-->
+      <h4>example description</h4>
+    </div>
+  </template>
+</dom-module>
+<script>
+// es6 works here
+const exampleItem = {
+  is: 'example-item',
+}
+Polymer(exampleItem)
+</script>
