@@ -8,19 +8,19 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js',
   },
-  resolveLoader: {
-    root: path.join(__dirname, 'node_modules'),
-  },
+  // resolveLoader: {
+    // root: path.join(__dirname, 'node_modules'),
+  // },
   module: {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file',
+        loader: 'file-loader',
         query: {
           name: '[name].[ext]?[hash]'
         }
@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'css',
+        loader: 'css-loader',
       },
     ],
   },
